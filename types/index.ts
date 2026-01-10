@@ -24,7 +24,7 @@ export interface ContributorTotal {
 export const PARTICIPANTS = [
   'MARCELO',
   'ELIANE',
-  'BERNADO',
+  'BERNARDO',
   'CARLOS',
   'YANDRA',
   'NATHAN',

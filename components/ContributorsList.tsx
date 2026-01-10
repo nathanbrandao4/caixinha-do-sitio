@@ -16,7 +16,7 @@ function formatCurrency(value: number): string {
 const avatars: Record<string, string> = {
   MARCELO: '👨',
   ELIANE: '👩',
-  BERNADO: '🧑',
+  BERNARDO: '🧑',
   CARLOS: '👴',
   YANDRA: '👩',
   NATHAN: '🧔',

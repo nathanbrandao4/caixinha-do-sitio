@@ -8,9 +8,7 @@ import { ContributorTotal } from '@/types'
 const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'NATHAN', total: 50 },
   { name: 'ELIANE', total: 50 },
-  // Adicione mais contribuições aqui:
-  // { name: 'MARCELO', total: 100 },
-  // { name: 'YANDRA', total: 75 },
+  { name: 'BERNARDO', total: 50 },
 ]
 // ========================================
 
