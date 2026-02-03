@@ -35,5 +35,5 @@ export const PARTICIPANTS = [
 
 export type Participant = (typeof PARTICIPANTS)[number]
 
-export const META = 4500
+export const META = 5000
 export const META_DATE = 'Dezembro 2026'
