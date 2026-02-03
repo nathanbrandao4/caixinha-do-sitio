@@ -5,7 +5,7 @@
   --foreground: #ffffff;
 }
 
-/* Fundo com foto de sítio com lago borrada */
+/* Fundo com foto da familia no sitio */
 body {
   color: var(--foreground);
   min-height: 100vh;
@@ -19,12 +19,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920&q=80');
+  background-image: url('/familia-sitio.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(6px) brightness(0.45);
-  transform: scale(1.1);
+  filter: blur(3px) brightness(0.55);
+  transform: scale(1.05);
   z-index: -2;
 }
 
@@ -37,8 +37,8 @@ body::after {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0, 30, 0, 0.3) 0%,
-    rgba(0, 20, 0, 0.4) 100%
+    rgba(0, 20, 0, 0.2) 0%,
+    rgba(0, 15, 0, 0.3) 100%
   );
   z-index: -1;
 }
