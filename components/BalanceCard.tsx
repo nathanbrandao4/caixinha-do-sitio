@@ -26,12 +26,14 @@ export default function BalanceCard({ balance }: BalanceCardProps) {
           Total Arrecadado
         </p>
 
-        {/* VALOR GIGANTE */}
-        <div className="mb-8">
-          <span className="text-white/50 text-4xl md:text-5xl">R$</span>
-          <span className="text-7xl sm:text-8xl md:text-9xl font-black text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-            {formatCurrency(balance)}
-          </span>
+        {/* VALOR GIGANTE - responsivo para mobile */}
+        <div className="mb-8 w-full overflow-hidden">
+          <div className="flex items-baseline justify-center whitespace-nowrap">
+            <span className="text-white/50 text-2xl sm:text-3xl md:text-5xl">R$</span>
+            <span className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+              {formatCurrency(balance)}
+            </span>
+          </div>
         </div>
 
         {/* Barra de progresso / Régua */}
