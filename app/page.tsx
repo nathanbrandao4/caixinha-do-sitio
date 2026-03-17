@@ -11,13 +11,13 @@ const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'BERNARDO', total: 150 },
   { name: 'MARCELO', total: 200 },
   { name: 'JOSÉ', total: 100 },
-  { name: 'CARLOS', total: 50 },
-  { name: 'YANDRA', total: 50 },
+  { name: 'CARLOS', total: 100 },
+  { name: 'YANDRA', total: 100 },
   { name: 'MARIA', total: 51 },
 ]
 
 // Rendimento CDI acumulado
-const RENDIMENTO_CDI = 9.49
+const RENDIMENTO_CDI = 11.53
 // ========================================
 
 export default function HomePage() {
