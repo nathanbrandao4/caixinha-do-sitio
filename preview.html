@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixinha do Sítio - Preview</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: blur(6px) brightness(0.45);
+      transform: scale(1.1);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(0,30,0,0.3) 0%, rgba(0,20,0,0.4) 100%);
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(234,179,8,0.3);
+      text-align: center;
+      padding: 24px 16px;
+    }
+    header h1 { font-size: 2.5rem; font-weight: 700; }
+    .yellow { color: #facc15; }
+    .do { color: rgba(255,255,255,0.5); font-size: 1.3rem; margin: 0 12px; }
+    .green { color: #4ade80; }
+    header p { color: rgba(255,255,255,0.5); font-size: 1.1rem; margin-top: 4px; }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Balance Card */
+    .balance-card {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 40px;
+      border: 2px solid rgba(234,179,8,0.5);
+      box-shadow: 0 0 30px rgba(234,179,8,0.4);
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+      margin-bottom: 48px;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 30px rgba(234,179,8,0.4); }
+      50% { box-shadow: 0 0 60px rgba(234,179,8,0.7); }
+    }
+
+    .balance-label {
+      color: rgba(250,204,21,0.8);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .balance-value {
+      margin-bottom: 8px;
+    }
+
+    .balance-value .prefix {
+      color: rgba(255,255,255,0.5);
+      font-size: 2.5rem;
+    }
+
+    .balance-value .amount {
+      font-size: 5rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 0 30px rgba(255,255,255,0.3);
+    }
+
+    .cdi-info {
+      color: rgba(74,222,128,0.7);
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      height: 32px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid rgba(234,179,8,0.4);
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, #16a34a, #4ade80, #facc15);
+      border-radius: 999px;
+      transition: width 1s ease-out;
+    }
+
+    .progress-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8px;
+    }
+
+    .info-row .label { color: rgba(255,255,255,0.4); font-size: 0.7rem; }
+    .info-row .meta-val { color: rgba(255,255,255,0.7); font-weight: 600; }
+    .info-row .date-val { color: #facc15; font-weight: 600; }
+    .info-row .falta-val { color: rgba(248,113,113,0.8); font-weight: 600; }
+
+    /* Ranking */
+    .section { width: 100%; max-width: 800px; margin-bottom: 48px; }
+
+    .section-header {
+      padding: 16px 20px;
+      border-radius: 16px 16px 0 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .ranking-header { background: linear-gradient(to right, rgba(22,163,74,0.8), rgba(34,197,94,0.8)); }
+    .monthly-header { background: linear-gradient(to right, rgba(37,99,235,0.8), rgba(59,130,246,0.8)); }
+
+    .section-body {
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+    }
+
+    .monthly-body {
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    /* Ranking grid */
+    .ranking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 4px;
+      padding: 12px;
+    }
+
+    .ranking-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(34,197,94,0.3);
+      background: rgba(20,83,45,0.3);
+    }
+
+    .ranking-item.inactive {
+      border-color: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .rank-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .rank-1 { background: #eab308; color: #000; }
+    .rank-2 { background: #9ca3af; color: #000; }
+    .rank-3 { background: #92400e; color: #fff; }
+    .rank-other { background: rgba(21,128,61,0.5); color: #fff; }
+    .rank-none { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.3); }
+
+    .rank-emoji { font-size: 1.5rem; }
+
+    .rank-info { flex: 1; min-width: 0; }
+    .rank-name { font-weight: 600; color: #fff; }
+    .rank-name.inactive { color: rgba(255,255,255,0.4); }
+    .rank-amount { font-size: 0.85rem; font-family: monospace; color: #4ade80; }
+    .rank-amount.inactive { color: rgba(255,255,255,0.3); }
+
+    /* Monthly accordion */
+    .month-list { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+    .month-item {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .month-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .month-header:hover { background: rgba(0,0,0,0.5); }
+
+    .month-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .month-name { font-weight: 600; font-size: 1.1rem; }
+
+    .month-tag {
+      font-size: 0.7rem;
+      background: rgba(234,179,8,0.2);
+      color: #facc15;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(234,179,8,0.3);
+    }
+
+    .month-total {
+      font-size: 0.85rem;
+      color: rgba(74,222,128,0.7);
+      margin-left: 8px;
+    }
+
+    .arrow {
+      color: rgba(255,255,255,0.5);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .arrow.open { transform: rotate(180deg); }
+
+    .month-content {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      background: rgba(0,0,0,0.2);
+    }
+
+    .month-empty {
+      padding: 24px;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+
+    .month-person {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .month-person:last-child { border-bottom: none; }
+
+    .person-name { font-weight: 500; }
+    .person-name.active { color: #fff; }
+    .person-name.none { color: rgba(255,255,255,0.3); }
+
+    .person-amount { font-family: monospace; font-weight: 600; color: #4ade80; }
+    .person-none { color: rgba(248,113,113,0.5); font-size: 0.85rem; font-style: italic; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 16px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .balance-value .amount { font-size: 3rem; }
+      .balance-value .prefix { font-size: 1.5rem; }
+      .balance-card { padding: 24px; }
+      .ranking-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      <span class="yellow">Caixinha</span>
+      <span class="do">do</span>
+      <span class="green">Sitio</span>
+    </h1>
+    <p>Férias em Família 2026</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Balance Card -->
+    <div class="balance-card">
+      <p class="balance-label">Total Arrecadado</p>
+      <div class="balance-value">
+        <span class="prefix">R$</span>
+        <span class="amount">1.040,15</span>
+      </div>
+      <p class="cdi-info">Inclui R$ 17,15 de rendimento CDI</p>
+
+      <div class="progress-container">
+        <div class="progress-fill" style="width: 20.8%"></div>
+        <div class="progress-text">20.8%</div>
+      </div>
+
+      <div class="info-row">
+        <div><p class="label">META</p><p class="meta-val">R$ 5.000,00</p></div>
+        <div style="text-align:center"><p class="label">ATE</p><p class="date-val">Dezembro 2026</p></div>
+        <div style="text-align:right"><p class="label">FALTA</p><p class="falta-val">R$ 3.959,85</p></div>
+      </div>
+    </div>
+
+    <!-- Ranking -->
+    <div class="section">
+      <div class="section-header ranking-header">
+        <span style="font-size:1.5rem">&#127942;</span>
+        RANKING DE CONTRIBUIÇÕES
+      </div>
+      <div class="section-body">
+        <div class="ranking-grid" id="ranking"></div>
+      </div>
+    </div>
+
+    <!-- Monthly Breakdown -->
+    <div class="section">
+      <div class="section-header monthly-header">
+        <span style="font-size:1.5rem">&#128198;</span>
+        CONTRIBUIÇÕES POR MÊS
+      </div>
+      <div class="section-body monthly-body">
+        <div class="month-list" id="months"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Caixinha do Sítio - Férias em Família</footer>
+
+<script>
+  // ============ DADOS ============
+  const PARTICIPANTS = ['MARCELO','ELIANE','BERNARDO','CARLOS','YANDRA','NATHAN','MARIA','LEONARDO','JOSE'];
+
+  const avatars = {
+    MARCELO: '\u{1F468}', ELIANE: '\u{1F469}', BERNARDO: '\u{1F9D1}',
+    CARLOS: '\u{1F474}', YANDRA: '\u{1F469}', NATHAN: '\u{1F9D4}',
+    MARIA: '\u{1F475}', LEONARDO: '\u{1F9D1}', JOSE: '\u{1F474}'
+  };
+
+  const totals = {
+    MARCELO: 200, NATHAN: 170, ELIANE: 152, BERNARDO: 150,
+    CARLOS: 100, YANDRA: 100, JOSE: 100, MARIA: 51, LEONARDO: 0
+  };
+
+  const monthsData = [
+    { month: 'Janeiro', label: 'opcional', data: { NATHAN: 50, ELIANE: 50, BERNARDO: 50 } },
+    { month: 'Fevereiro', data: { MARCELO: 100, NATHAN: 60, MARIA: 51, ELIANE: 50, BERNARDO: 50, CARLOS: 50, YANDRA: 50, JOSE: 50 } },
+    { month: 'Março', data: { MARCELO: 100, NATHAN: 60, ELIANE: 52, BERNARDO: 50, CARLOS: 50, YANDRA: 50, JOSE: 50 } },
+    { month: 'Abril', data: {} },
+    { month: 'Maio', data: {} },
+    { month: 'Junho', data: {} },
+    { month: 'Julho', data: {} },
+    { month: 'Agosto', data: {} },
+    { month: 'Setembro', data: {} },
+    { month: 'Outubro', data: {} },
+    { month: 'Novembro', data: {} },
+    { month: 'Dezembro', data: {} },
+  ];
+
+  function fmt(v) {
+    return v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  // ============ RANKING ============
+  const sorted = [...PARTICIPANTS].sort((a, b) => (totals[b] || 0) - (totals[a] || 0));
+
+  let rank = 0, lastVal = -1;
+  const ranks = {};
+  sorted.forEach(name => {
+    const t = totals[name] || 0;
+    if (t > 0) {
+      if (t !== lastVal) { rank++; lastVal = t; }
+      ranks[name] = rank;
+    }
+  });
+
+  const rankingEl = document.getElementById('ranking');
+  sorted.forEach(name => {
+    const t = totals[name] || 0;
+    const r = ranks[name];
+    const active = t > 0;
+
+    const rankClass = r === 1 ? 'rank-1' : r === 2 ? 'rank-2' : r === 3 ? 'rank-3' : r ? 'rank-other' : 'rank-none';
+
+    rankingEl.innerHTML += `
+      <div class="ranking-item ${active ? '' : 'inactive'}">
+        <div class="rank-badge ${rankClass}">${r ? r + '\u00B0' : '-'}</div>
+        <span class="rank-emoji">${avatars[name] || '\u{1F464}'}</span>
+        <div class="rank-info">
+          <div class="rank-name ${active ? '' : 'inactive'}">${name}</div>
+          <div class="rank-amount ${active ? '' : 'inactive'}">R$ ${fmt(t)}</div>
+        </div>
+      </div>`;
+  });
+
+  // ============ MONTHS ============
+  const monthsEl = document.getElementById('months');
+
+  monthsData.forEach((m, idx) => {
+    const contributions = PARTICIPANTS.map(name => ({
+      name,
+      amount: m.data[name] !== undefined ? m.data[name] : null
+    })).sort((a, b) => {
+      if (a.amount === null && b.amount === null) return 0;
+      if (a.amount === null) return 1;
+      if (b.amount === null) return -1;
+      return b.amount - a.amount;
+    });
+
+    const totalMonth = contributions.reduce((s, c) => s + (c.amount || 0), 0);
+    const hasData = totalMonth > 0;
+
+    const labelHtml = m.label ? `<span class="month-tag">${m.label}</span>` : '';
+    const totalHtml = hasData ? `<span class="month-total">R$ ${fmt(totalMonth)}</span>` : '';
+
+    let contentHtml;
+    if (!hasData) {
+      contentHtml = '<div class="month-empty">sem contribuintes</div>';
+    } else {
+      contentHtml = contributions.map(c => `
+        <div class="month-person">
+          <span class="person-name ${c.amount !== null ? 'active' : 'none'}">${c.name}</span>
+          ${c.amount !== null
+            ? `<span class="person-amount">R$ ${fmt(c.amount)}</span>`
+            : `<span class="person-none">não contribuiu</span>`
+          }
+        </div>`).join('');
+    }
+
+    monthsEl.innerHTML += `
+      <div class="month-item">
+        <button class="month-header" onclick="toggleMonth(${idx})">
+          <div class="month-header-left">
+            <span style="font-size:1.2rem">&#128197;</span>
+            <span class="month-name">${m.month}</span>
+            ${labelHtml}
+            ${totalHtml}
+          </div>
+          <span class="arrow" id="arrow-${idx}">\u25BC</span>
+        </button>
+        <div class="month-content" id="month-${idx}" style="display:none">
+          ${contentHtml}
+        </div>
+      </div>`;
+  });
+
+  function toggleMonth(idx) {
+    const el = document.getElementById('month-' + idx);
+    const arrow = document.getElementById('arrow-' + idx);
+    if (el.style.display === 'none') {
+      el.style.display = 'block';
+      arrow.classList.add('open');
+    } else {
+      el.style.display = 'none';
+      arrow.classList.remove('open');
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 import BalanceCard from '@/components/BalanceCard'
 import ContributorsList from '@/components/ContributorsList'
+import MonthlyBreakdown from '@/components/MonthlyBreakdown'
 import { ContributorTotal } from '@/types'
 
 // ========================================
@@ -14,10 +15,11 @@ const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'CARLOS', total: 100 },
   { name: 'YANDRA', total: 100 },
   { name: 'MARIA', total: 51 },
+  { name: 'LEONARDO', total: 0 },
 ]
 
 // Rendimento CDI acumulado
-const RENDIMENTO_CDI = 11.53
+const RENDIMENTO_CDI = 17.15
 // ========================================
 
 export default function HomePage() {
@@ -25,22 +27,27 @@ export default function HomePage() {
   const balance = contribuicoes + RENDIMENTO_CDI
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[85vh] px-4 py-8">
+    <div className="flex flex-col items-center px-4 py-8">
       {/* Saldo GRANDE e Centralizado */}
       <div className="w-full max-w-2xl mb-12">
         <BalanceCard balance={balance} />
       </div>
 
-      {/* Lista de Contribuintes Abaixo */}
-      <div className="w-full max-w-3xl">
-        <ContributorsList totals={CONTRIBUICOES} />
-      </div>
-
       {/* Rendimento CDI - discreto */}
-      <div className="w-full max-w-3xl mt-6 text-center">
+      <div className="w-full max-w-3xl mb-8 text-center">
         <p className="text-white/30 text-xs">
           Inclui R$ {RENDIMENTO_CDI.toFixed(2).replace('.', ',')} de rendimento CDI
         </p>
+      </div>
+
+      {/* Lista de Contribuintes */}
+      <div className="w-full max-w-3xl mb-12">
+        <ContributorsList totals={CONTRIBUICOES} />
+      </div>
+
+      {/* Contribuições por Mês */}
+      <div className="w-full max-w-3xl">
+        <MonthlyBreakdown />
       </div>
     </div>
   )
