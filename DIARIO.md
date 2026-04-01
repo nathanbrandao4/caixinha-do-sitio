@@ -34,7 +34,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
 | MARCELO   | 200,00                 |
-| NATHAN    | 170,00                 |
+| NATHAN    | 230,00                 |
 | ELIANE    | 152,00                 |
 | BERNARDO  | 150,00                 |
 | CARLOS    | 100,00                 |
@@ -81,19 +81,25 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARIA     | não contribuiu |
 | LEONARDO  | não contribuiu |
 
-### Abril a Dezembro
+### Abril
+| Nome      | Valor   |
+|-----------|---------|
+| NATHAN    | R$ 60   |
+| Demais    | não contribuíram |
+
+### Maio a Dezembro
 Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (31/03/2026)
+## NÚMEROS ATUAIS (01/04/2026)
 
-- **Total contribuições:** R$ 1.023,00
-- **Rendimento CDI:** R$ 17,15
-- **Saldo total:** R$ 1.040,15
+- **Total contribuições:** R$ 1.083,00
+- **Rendimento CDI:** R$ 17,74
+- **Saldo total:** R$ 1.100,74
 - **Meta:** R$ 5.000,00
-- **Progresso:** 20,8%
-- **Falta:** R$ 3.959,85
+- **Progresso:** 22,0%
+- **Falta:** R$ 3.899,85
 - **Prazo:** Dezembro/2026
 
 ---
