@@ -72,6 +72,8 @@ const MONTHS_DATA: MonthData[] = [
   buildMonth('Abril', {
     MARCELO: 100,
     NATHAN: 60,
+    CARLOS: 50,
+    YANDRA: 50,
   }),
 
   ...['Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'].map(
