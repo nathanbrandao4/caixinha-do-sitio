@@ -8,13 +8,13 @@ import { ContributorTotal } from '@/types'
 // ========================================
 const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'NATHAN', total: 290 },
-  { name: 'ELIANE', total: 152 },
+  { name: 'ELIANE', total: 204 },
   { name: 'BERNARDO', total: 150 },
   { name: 'MARCELO', total: 300 },
-  { name: 'JOSÉ', total: 100 },
+  { name: 'JOSÉ', total: 150 },
   { name: 'CARLOS', total: 150 },
   { name: 'YANDRA', total: 150 },
-  { name: 'MARIA', total: 51 },
+  { name: 'MARIA', total: 102 },
   { name: 'LEONARDO', total: 0 },
 ]
 
