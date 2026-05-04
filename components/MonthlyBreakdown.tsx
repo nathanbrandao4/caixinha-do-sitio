@@ -72,8 +72,11 @@ const MONTHS_DATA: MonthData[] = [
   buildMonth('Abril', {
     MARCELO: 100,
     NATHAN: 60,
+    ELIANE: 52,
+    MARIA: 51,
     CARLOS: 50,
     YANDRA: 50,
+    JOSÉ: 50,
   }),
 
   buildMonth('Maio', {
