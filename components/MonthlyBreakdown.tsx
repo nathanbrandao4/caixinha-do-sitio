@@ -76,7 +76,11 @@ const MONTHS_DATA: MonthData[] = [
     YANDRA: 50,
   }),
 
-  ...['Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'].map(
+  buildMonth('Maio', {
+    NATHAN: 60,
+  }),
+
+  ...['Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'].map(
     (month) => buildMonth(month, {})
   ),
 ]
