@@ -21,7 +21,6 @@ const avatars: Record<string, string> = {
   YANDRA: '👩',
   NATHAN: '🧔',
   MARIA: '👵',
-  LEONARDO: '🧑',
   JOSÉ: '👴',
 }
 

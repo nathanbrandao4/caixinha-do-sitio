@@ -29,7 +29,6 @@ export const PARTICIPANTS = [
   'YANDRA',
   'NATHAN',
   'MARIA',
-  'LEONARDO',
   'JOSÉ',
 ] as const
 

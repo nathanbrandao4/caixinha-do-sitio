@@ -41,7 +41,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | YANDRA    | 100,00                 |
 | JOSÉ      | 100,00                 |
 | MARIA     | 51,00                  |
-| LEONARDO  | 0,00                   |
 
 ---
 
@@ -66,7 +65,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
-| LEONARDO  | não contribuiu |
 
 ### Março
 | Nome      | Valor   |
@@ -79,7 +77,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
 | MARIA     | não contribuiu |
-| LEONARDO  | não contribuiu |
 
 ### Abril
 | Nome      | Valor   |
