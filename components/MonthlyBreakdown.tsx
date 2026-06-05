@@ -73,6 +73,7 @@ const MONTHS_DATA: MonthData[] = [
     MARCELO: 100,
     NATHAN: 60,
     ELIANE: 52,
+    BERNARDO: 50,
     MARIA: 51,
     CARLOS: 50,
     YANDRA: 50,
@@ -82,11 +83,18 @@ const MONTHS_DATA: MonthData[] = [
   buildMonth('Maio', {
     MARCELO: 100,
     NATHAN: 60,
+    ELIANE: 50,
     CARLOS: 50,
     YANDRA: 50,
+    JOSÉ: 50,
+    MARIA: 50,
   }),
 
-  ...['Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'].map(
+  buildMonth('Junho', {
+    NATHAN: 60,
+  }),
+
+  ...['Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'].map(
     (month) => buildMonth(month, {})
   ),
 ]
