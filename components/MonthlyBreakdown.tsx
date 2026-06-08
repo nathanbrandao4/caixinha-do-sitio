@@ -87,6 +87,7 @@ const MONTHS_DATA: MonthData[] = [
     MARCELO: 100,
     NATHAN: 60,
     ELIANE: 50,
+    BERNARDO: 50,
     CARLOS: 50,
     YANDRA: 50,
     JOSÉ: 50,
