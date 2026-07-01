@@ -280,10 +280,16 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
 }
 
 export default function MonthlyBreakdown() {
-  const currentMonthIndex = new Date().getMonth()
+  const browserMonthIndex = new Date().getMonth()
+
+  // Se já existe contribuição num mês futuro, todos os meses anteriores são passados
+  const lastContributedMonth = Math.max(
+    ...MONTHS_DATA.filter((m) => m.contributions.some((c) => c.amount !== null)).map((m) => m.monthIndex)
+  )
+  const refMonthIndex = Math.max(browserMonthIndex, lastContributedMonth)
 
   const pendingItems = MONTHS_DATA.flatMap((m) => {
-    if (m.optional || m.monthIndex >= currentMonthIndex) return []
+    if (m.optional || m.monthIndex >= refMonthIndex) return []
     return m.pending.map((name) => ({ name, month: m.month }))
   })
 
@@ -302,7 +308,7 @@ export default function MonthlyBreakdown() {
             <MonthAccordion
               key={monthData.month}
               data={monthData}
-              isPast={monthData.monthIndex < currentMonthIndex}
+              isPast={monthData.monthIndex < refMonthIndex}
             />
           ))}
         </div>
