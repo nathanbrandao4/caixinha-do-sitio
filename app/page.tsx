@@ -8,17 +8,17 @@ import { ContributorTotal } from '@/types'
 // ========================================
 const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'NATHAN', total: 410 },
-  { name: 'ELIANE', total: 254 },
+  { name: 'ELIANE', total: 304 },
   { name: 'BERNARDO', total: 300 },
   { name: 'MARCELO', total: 500 },
-  { name: 'JOSÉ', total: 200 },
+  { name: 'JOSÉ', total: 250 },
   { name: 'CARLOS', total: 250 },
   { name: 'YANDRA', total: 250 },
-  { name: 'MARIA', total: 152 },
+  { name: 'MARIA', total: 202 },
 ]
 
 // Rendimento CDI acumulado
-const RENDIMENTO_CDI = 70.16
+const RENDIMENTO_CDI = 76.52
 // ========================================
 
 export default function HomePage() {

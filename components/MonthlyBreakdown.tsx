@@ -94,7 +94,7 @@ const MONTHS_DATA: MonthData[] = [
     MARIA: 50,
   }),
 
-  buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, CARLOS: 50, YANDRA: 50 }),
+  buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, CARLOS: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
 
   buildMonth('Julho', 6, { NATHAN: 60 }),
 
