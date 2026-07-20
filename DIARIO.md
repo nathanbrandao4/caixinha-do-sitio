@@ -1,4 +1,4 @@
-# DIÁRIO DO PROJETO - Caixinha do Sítio
+# DIÁRIO DO ETO - Caixinha do Sítio
 
 > Este arquivo serve como registro completo do estado atual do projeto.
 > Sempre que uma conversa começar, basta enviar esta pasta para o assistente ficar a par de tudo.
@@ -33,14 +33,14 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
-| MARCELO   | 200,00                 |
-| NATHAN    | 230,00                 |
-| ELIANE    | 152,00                 |
-| BERNARDO  | 150,00                 |
-| CARLOS    | 100,00                 |
-| YANDRA    | 100,00                 |
-| JOSÉ      | 100,00                 |
-| MARIA     | 51,00                  |
+| MARCELO   | 600,00                 |
+| NATHAN    | 410,00                 |
+| ELIANE    | 304,00                 |
+| BERNARDO  | 350,00                 |
+| JOSÉ      | 250,00                 |
+| CARLOS    | 250,00                 |
+| YANDRA    | 250,00                 |
+| MARIA     | 202,00                 |
 
 ---
 
@@ -81,22 +81,57 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 ### Abril
 | Nome      | Valor   |
 |-----------|---------|
+| MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
+| ELIANE    | R$ 52   |
+| MARIA     | R$ 51   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
+| JOSÉ      | R$ 50   |
+| BERNARDO  | não contribuiu |
+
+### Maio
+| Nome      | Valor   |
+|-----------|---------|
+| MARCELO   | R$ 100  |
+| NATHAN    | R$ 60   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
 | Demais    | não contribuíram |
 
-### Maio a Dezembro
+### Junho
+| Nome      | Valor   |
+|-----------|---------|
+| MARCELO   | R$ 100  |
+| NATHAN    | R$ 60   |
+| BERNARDO  | R$ 50   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
+| ELIANE    | R$ 50   |
+| MARIA     | R$ 50   |
+| JOSÉ      | R$ 50   |
+
+### Julho
+| Nome      | Valor   |
+|-----------|---------|
+| MARCELO   | R$ 100  |
+| NATHAN    | R$ 60   |
+| BERNARDO  | R$ 50   |
+| Demais    | não contribuíram (ainda) |
+
+### Agosto a Dezembro
 Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (01/04/2026)
+## NÚMEROS ATUAIS (20/07/2026)
 
-- **Total contribuições:** R$ 1.083,00
-- **Rendimento CDI:** R$ 17,74
-- **Saldo total:** R$ 1.100,74
+- **Total contribuições:** R$ 2.616,00
+- **Rendimento CDI:** R$ 89,92
+- **Saldo total:** R$ 2.705,92
 - **Meta:** R$ 5.000,00
-- **Progresso:** 22,0%
-- **Falta:** R$ 3.899,85
+- **Progresso:** 54,1%
+- **Falta:** R$ 2.294,08
 - **Prazo:** Dezembro/2026
 
 ---
@@ -207,6 +242,18 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 20/07/2026 - Marcelo e Bernardo +contribuição em Julho
+- **Julho:** Marcelo +R$100, Bernardo +R$50 (além do Nathan +R$60 já registrado)
+- Totais atualizados: Marcelo 600, Bernardo 350 (demais inalterados)
+- Saldo total: R$ 2.705,92 (54,1% da meta)
+
+### 02/06/2026 - Atualização Abril/Maio + remoção de Leonardo + CDI atualizado
+- **CDI atualizado:** R$ 17,15 → R$ 42,47
+- **LEONARDO removido** do ranking
+- **Abril adicionado:** Marcelo 100, Nathan 60, Eliane 52, Maria 51, Carlos/Yandra/José 50
+- **Maio adicionado:** Marcelo 100, Nathan 60, Carlos/Yandra 50
+- Totais atualizados: Marcelo 400, Nathan 290, Eliane 204, Carlos/Yandra 200, Bernardo/José 150, Maria 102
 
 ### 31/03/2026 - Adição de contribuições por mês + atualização CDI
 - **CDI atualizado:** R$ 11,53 → R$ 17,15
