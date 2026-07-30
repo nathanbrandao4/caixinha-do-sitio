@@ -124,14 +124,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (20/07/2026)
+## NÚMEROS ATUAIS (30/07/2026)
 
 - **Total contribuições:** R$ 2.616,00
-- **Rendimento CDI:** R$ 89,92
-- **Saldo total:** R$ 2.705,92
+- **Rendimento CDI:** R$ 101,29
+- **Saldo total:** R$ 2.717,29
 - **Meta:** R$ 5.000,00
-- **Progresso:** 54,1%
-- **Falta:** R$ 2.294,08
+- **Progresso:** 54,3%
+- **Falta:** R$ 2.282,71
 - **Prazo:** Dezembro/2026
 
 ---
@@ -242,6 +242,10 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 30/07/2026 - CDI atualizado
+- **CDI atualizado:** R$ 89,92 → R$ 101,29
+- Saldo total: R$ 2.717,29 (54,3% da meta)
 
 ### 20/07/2026 - Marcelo e Bernardo +contribuição em Julho
 - **Julho:** Marcelo +R$100, Bernardo +R$50 (além do Nathan +R$60 já registrado)
