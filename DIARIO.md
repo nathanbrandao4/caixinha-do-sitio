@@ -124,14 +124,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (30/07/2026)
+## NÚMEROS ATUAIS (02/08/2026)
 
 - **Total contribuições:** R$ 2.616,00
-- **Rendimento CDI:** R$ 101,29
-- **Saldo total:** R$ 2.717,29
+- **Rendimento CDI:** R$ 104,16
+- **Saldo total:** R$ 2.720,16
 - **Meta:** R$ 5.000,00
-- **Progresso:** 54,3%
-- **Falta:** R$ 2.282,71
+- **Progresso:** 54,4%
+- **Falta:** R$ 2.279,84
 - **Prazo:** Dezembro/2026
 
 ---
@@ -242,6 +242,11 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 02/08/2026 - CDI atualizado + Julho virou mês em atraso
+- **CDI atualizado:** R$ 101,29 → R$ 104,16
+- Saldo total: R$ 2.720,16 (54,4% da meta)
+- Mês virou para Agosto: quem não contribuiu em Julho (ELIANE, CARLOS, YANDRA, MARIA, JOSÉ) passou a aparecer automaticamente na lista de pendências em vermelho (essa lógica já existia em `MonthlyBreakdown.tsx`, não precisou de mudança de código)
 
 ### 30/07/2026 - CDI atualizado
 - **CDI atualizado:** R$ 89,92 → R$ 101,29
