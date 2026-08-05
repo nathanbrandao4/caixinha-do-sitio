@@ -96,10 +96,12 @@ const MONTHS_DATA: MonthData[] = [
 
   buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, CARLOS: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
 
-  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50 }),
+  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50, CARLOS: 50 }),
 
-  ...(['Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'] as const).map(
-    (month, i) => buildMonth(month, 7 + i, {})
+  buildMonth('Agosto', 7, { NATHAN: 60 }),
+
+  ...(['Setembro', 'Outubro', 'Novembro', 'Dezembro'] as const).map(
+    (month, i) => buildMonth(month, 8 + i, {})
   ),
 ]
 

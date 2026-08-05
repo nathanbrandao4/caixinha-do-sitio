@@ -34,12 +34,12 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
 | MARCELO   | 600,00                 |
-| NATHAN    | 410,00                 |
+| NATHAN    | 470,00                 |
 | ELIANE    | 304,00                 |
 | BERNARDO  | 350,00                 |
 | JOSÉ      | 250,00                 |
-| CARLOS    | 250,00                 |
-| YANDRA    | 250,00                 |
+| CARLOS    | 300,00                 |
+| YANDRA    | 300,00                 |
 | MARIA     | 202,00                 |
 
 ---
@@ -117,21 +117,29 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
 | BERNARDO  | R$ 50   |
+| YANDRA    | R$ 50   |
+| CARLOS    | R$ 50   |
+| Demais    | não contribuíram |
+
+### Agosto
+| Nome      | Valor   |
+|-----------|---------|
+| NATHAN    | R$ 60   |
 | Demais    | não contribuíram (ainda) |
 
-### Agosto a Dezembro
+### Setembro a Dezembro
 Sem contribuições ainda.
 
 ---
 
 ## NÚMEROS ATUAIS (02/08/2026)
 
-- **Total contribuições:** R$ 2.616,00
-- **Rendimento CDI:** R$ 104,16
-- **Saldo total:** R$ 2.720,16
+- **Total contribuições:** R$ 2.776,00
+- **Rendimento CDI:** R$ 107,03
+- **Saldo total:** R$ 2.883,03
 - **Meta:** R$ 5.000,00
-- **Progresso:** 54,4%
-- **Falta:** R$ 2.279,84
+- **Progresso:** 57,7%
+- **Falta:** R$ 2.116,97
 - **Prazo:** Dezembro/2026
 
 ---
@@ -242,6 +250,13 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 02/08/2026 (2) - Yandra e Carlos quitam pendência de Julho + Nathan em Agosto + CDI
+- **Julho:** Yandra +R$50 e Carlos +R$50 (pendências removidas da lista vermelha)
+- **Agosto:** Nathan +R$60 (primeira contribuição do mês)
+- **CDI atualizado:** R$ 104,16 → R$ 107,03
+- Totais atualizados: Nathan 470, Carlos 300, Yandra 300
+- Saldo total: R$ 2.883,03 (57,7% da meta)
 
 ### 02/08/2026 - CDI atualizado + Julho virou mês em atraso
 - **CDI atualizado:** R$ 101,29 → R$ 104,16
