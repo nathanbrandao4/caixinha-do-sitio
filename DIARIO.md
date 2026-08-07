@@ -36,7 +36,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARCELO   | 600,00                 |
 | NATHAN    | 470,00                 |
 | ELIANE    | 304,00                 |
-| BERNARDO  | 350,00                 |
+| BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
 | CARLOS    | 300,00                 |
 | YANDRA    | 300,00                 |
@@ -124,6 +124,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 ### Agosto
 | Nome      | Valor   |
 |-----------|---------|
+| BERNARDO  | R$ 100  |
 | NATHAN    | R$ 60   |
 | Demais    | não contribuíram (ainda) |
 
@@ -132,14 +133,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (02/08/2026)
+## NÚMEROS ATUAIS (07/08/2026)
 
-- **Total contribuições:** R$ 2.776,00
-- **Rendimento CDI:** R$ 107,03
-- **Saldo total:** R$ 2.883,03
+- **Total contribuições:** R$ 2.876,00
+- **Rendimento CDI:** R$ 110,04
+- **Saldo total:** R$ 2.986,04
 - **Meta:** R$ 5.000,00
-- **Progresso:** 57,7%
-- **Falta:** R$ 2.116,97
+- **Progresso:** 59,7%
+- **Falta:** R$ 2.013,96
 - **Prazo:** Dezembro/2026
 
 ---
@@ -250,6 +251,12 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 07/08/2026 - Bernardo em Agosto + CDI atualizado
+- **Agosto:** Bernardo +R$100
+- **CDI atualizado:** R$ 107,03 → R$ 110,04
+- Total atualizado: Bernardo 450
+- Saldo total: R$ 2.986,04 (59,7% da meta)
 
 ### 02/08/2026 (2) - Yandra e Carlos quitam pendência de Julho + Nathan em Agosto + CDI
 - **Julho:** Yandra +R$50 e Carlos +R$50 (pendências removidas da lista vermelha)
