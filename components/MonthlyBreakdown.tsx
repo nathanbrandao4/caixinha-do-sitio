@@ -202,8 +202,22 @@ function MonthAccordion({ data, isPast }: { data: MonthData; isPast: boolean }) 
   )
 }
 
+// Valor padrão da cota mensal de cada participante (usado para calcular o total em atraso)
+const VALOR_PADRAO: Record<string, number> = {
+  MARCELO: 100,
+  NATHAN: 60,
+  ELIANE: 50,
+  BERNARDO: 50,
+  CARLOS: 50,
+  YANDRA: 50,
+  JOSÉ: 50,
+  MARIA: 50,
+}
+
 function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
   if (items.length === 0) return null
+
+  const totalAtraso = items.reduce((acc, item) => acc + (VALOR_PADRAO[item.name] ?? 50), 0)
 
   return (
     <div
@@ -266,6 +280,25 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Total em atraso */}
+      <div
+        className="text-center py-6 px-4"
+        style={{
+          borderTop: '1px solid rgba(239,68,68,0.3)',
+          background: 'rgba(239,68,68,0.08)',
+        }}
+      >
+        <div className="text-xs font-bold uppercase tracking-widest text-red-400/70 mb-1">
+          Total em atraso
+        </div>
+        <div
+          className="text-5xl sm:text-6xl font-black text-red-500"
+          style={{ textShadow: '0 0 30px rgba(239,68,68,0.5)' }}
+        >
+          R$ {formatCurrency(totalAtraso)}
+        </div>
       </div>
 
       <div
