@@ -33,7 +33,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
-| MARCELO   | 600,00                 |
+| MARCELO   | 700,00                 |
 | NATHAN    | 470,00                 |
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
@@ -124,6 +124,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 ### Agosto
 | Nome      | Valor   |
 |-----------|---------|
+| MARCELO   | R$ 100  |
 | BERNARDO  | R$ 100  |
 | NATHAN    | R$ 60   |
 | Demais    | não contribuíram (ainda) |
@@ -135,12 +136,12 @@ Sem contribuições ainda.
 
 ## NÚMEROS ATUAIS (07/08/2026)
 
-- **Total contribuições:** R$ 2.876,00
-- **Rendimento CDI:** R$ 110,04
-- **Saldo total:** R$ 2.986,04
+- **Total contribuições:** R$ 2.976,00
+- **Rendimento CDI:** R$ 119,07
+- **Saldo total:** R$ 3.095,07
 - **Meta:** R$ 5.000,00
-- **Progresso:** 59,7%
-- **Falta:** R$ 2.013,96
+- **Progresso:** 61,9%
+- **Falta:** R$ 1.904,93
 - **Prazo:** Dezembro/2026
 
 ---
@@ -251,6 +252,12 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 07/08/2026 (2) - Marcelo em Agosto + CDI atualizado
+- **Agosto:** Marcelo +R$100
+- **CDI atualizado:** R$ 110,04 → R$ 119,07
+- Total atualizado: Marcelo 700
+- Saldo total: R$ 3.095,07 (61,9% da meta)
 
 ### 07/08/2026 - Bernardo em Agosto + CDI atualizado
 - **Agosto:** Bernardo +R$100
