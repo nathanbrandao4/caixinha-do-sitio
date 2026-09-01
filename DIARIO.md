@@ -34,12 +34,12 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
 | MARCELO   | 700,00                 |
-| NATHAN    | 470,00                 |
+| NATHAN    | 530,00                 |
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
-| CARLOS    | 300,00                 |
-| YANDRA    | 300,00                 |
+| CARLOS    | 350,00                 |
+| YANDRA    | 350,00                 |
 | MARIA     | 202,00                 |
 
 ---
@@ -127,21 +127,29 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARCELO   | R$ 100  |
 | BERNARDO  | R$ 100  |
 | NATHAN    | R$ 60   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
+| ELIANE / JOSÉ / MARIA | não contribuíram (pendência) |
+
+### Setembro
+| Nome      | Valor   |
+|-----------|---------|
+| NATHAN    | R$ 60   |
 | Demais    | não contribuíram (ainda) |
 
-### Setembro a Dezembro
+### Outubro a Dezembro
 Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (07/08/2026)
+## NÚMEROS ATUAIS (01/09/2026)
 
-- **Total contribuições:** R$ 2.976,00
-- **Rendimento CDI:** R$ 119,07
-- **Saldo total:** R$ 3.095,07
+- **Total contribuições:** R$ 3.136,00
+- **Rendimento CDI:** R$ 124,94
+- **Saldo total:** R$ 3.260,94
 - **Meta:** R$ 5.000,00
-- **Progresso:** 61,9%
-- **Falta:** R$ 1.904,93
+- **Progresso:** 65,2%
+- **Falta:** R$ 1.739,06
 - **Prazo:** Dezembro/2026
 
 ---
@@ -252,6 +260,14 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 01/09/2026 - Carlos e Yandra quitam Agosto + Nathan em Setembro + CDI
+- **Agosto:** Carlos +R$50 e Yandra +R$50 (saíram da lista de pendências de Agosto)
+- **Setembro:** Nathan +R$60 (primeira contribuição do mês)
+- **CDI atualizado:** R$ 119,07 → R$ 124,94
+- Totais atualizados: Nathan 530, Carlos 350, Yandra 350
+- Pendências de Agosto (automático): agora só ELIANE, JOSÉ e MARIA
+- Saldo total: R$ 3.260,94 (65,2% da meta)
 
 ### 07/08/2026 (2) - Marcelo em Agosto + CDI atualizado
 - **Agosto:** Marcelo +R$100
