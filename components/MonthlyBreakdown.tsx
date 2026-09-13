@@ -100,7 +100,7 @@ const MONTHS_DATA: MonthData[] = [
 
   buildMonth('Agosto', 7, { NATHAN: 60, BERNARDO: 100, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
 
-  buildMonth('Setembro', 8, { NATHAN: 60 }),
+  buildMonth('Setembro', 8, { NATHAN: 60, YANDRA: 50, CARLOS: 50 }),
 
   ...(['Outubro', 'Novembro', 'Dezembro'] as const).map(
     (month, i) => buildMonth(month, 9 + i, {})

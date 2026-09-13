@@ -38,8 +38,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
-| CARLOS    | 350,00                 |
-| YANDRA    | 350,00                 |
+| CARLOS    | 400,00                 |
+| YANDRA    | 400,00                 |
 | MARIA     | 202,00                 |
 
 ---
@@ -135,6 +135,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | Nome      | Valor   |
 |-----------|---------|
 | NATHAN    | R$ 60   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
 | Demais    | não contribuíram (ainda) |
 
 ### Outubro a Dezembro
@@ -142,14 +144,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (01/09/2026)
+## NÚMEROS ATUAIS (13/09/2026)
 
-- **Total contribuições:** R$ 3.136,00
-- **Rendimento CDI:** R$ 124,94
-- **Saldo total:** R$ 3.260,94
+- **Total contribuições:** R$ 3.236,00
+- **Rendimento CDI:** R$ 150,53
+- **Saldo total:** R$ 3.386,53
 - **Meta:** R$ 5.000,00
-- **Progresso:** 65,2%
-- **Falta:** R$ 1.739,06
+- **Progresso:** 67,7%
+- **Falta:** R$ 1.613,47
 - **Prazo:** Dezembro/2026
 
 ---
@@ -260,6 +262,12 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 13/09/2026 - Yandra e Carlos em Setembro + CDI atualizado
+- **Setembro:** Yandra +R$50 e Carlos +R$50
+- **CDI atualizado:** R$ 124,94 → R$ 150,53
+- Totais atualizados: Carlos 400, Yandra 400
+- Saldo total: R$ 3.386,53 (67,7% da meta)
 
 ### 01/09/2026 - Carlos e Yandra quitam Agosto + Nathan em Setembro + CDI
 - **Agosto:** Carlos +R$50 e Yandra +R$50 (saíram da lista de pendências de Agosto)
