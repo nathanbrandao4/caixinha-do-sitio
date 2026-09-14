@@ -10,7 +10,7 @@ const CONTRIBUICOES: ContributorTotal[] = [
   { name: 'NATHAN', total: 530 },
   { name: 'ELIANE', total: 304 },
   { name: 'BERNARDO', total: 450 },
-  { name: 'MARCELO', total: 700 },
+  { name: 'MARCELO', total: 800 },
   { name: 'JOSÉ', total: 250 },
   { name: 'CARLOS', total: 400 },
   { name: 'YANDRA', total: 400 },
