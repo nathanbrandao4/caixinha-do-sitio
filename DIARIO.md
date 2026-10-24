@@ -33,7 +33,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
-| MARCELO   | 800,00                 |
+| MARCELO   | 900,00                 |
 | NATHAN    | 590,00                 |
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
@@ -85,19 +85,22 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | ELIANE    | R$ 52   |
 | MARIA     | R$ 51   |
+| BERNARDO  | R$ 50   |
 | CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
-| BERNARDO  | não contribuiu |
 
 ### Maio
 | Nome      | Valor   |
 |-----------|---------|
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
+| ELIANE    | R$ 50   |
+| BERNARDO  | R$ 50   |
 | CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
-| Demais    | não contribuíram |
+| JOSÉ      | R$ 50   |
+| MARIA     | R$ 50   |
 
 ### Junho
 | Nome      | Valor   |
@@ -143,6 +146,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 ### Outubro
 | Nome      | Valor   |
 |-----------|---------|
+| MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
 | Demais    | não contribuíram (ainda) |
 
@@ -151,14 +155,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (07/10/2026)
+## NÚMEROS ATUAIS (24/10/2026)
 
-- **Total contribuições:** R$ 3.396,00
-- **Rendimento CDI:** R$ 180,85
-- **Saldo total:** R$ 3.576,85
+- **Total contribuições:** R$ 3.496,00
+- **Rendimento CDI:** R$ 193,61
+- **Saldo total:** R$ 3.689,61
 - **Meta:** R$ 5.000,00
-- **Progresso:** 71,5%
-- **Falta:** R$ 1.423,15
+- **Progresso:** 73,8%
+- **Falta:** R$ 1.310,39
 - **Prazo:** Dezembro/2026
 
 ---
@@ -269,6 +273,16 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 24/10/2026 (2) - CDI atualizado
+- **CDI atualizado:** R$ 180,85 → R$ 193,61
+- Saldo total: R$ 3.689,61 (73,8% da meta)
+
+### 24/10/2026 - Marcelo em Outubro + correção de dados antigos no DIARIO
+- **Outubro:** Marcelo +R$100
+- Total atualizado: Marcelo 900
+- Saldo total: R$ 3.676,85 (73,5% da meta)
+- **Correção de documentação:** as tabelas de Abril e Maio neste arquivo estavam desatualizadas em relação ao código (`MonthlyBreakdown.tsx`) — diziam que Bernardo (Abril) e Eliane/Bernardo/José/Maria (Maio) estavam pendentes, mas o código já tinha todo mundo pago nesses dois meses. Corrigido para refletir o código, que é a fonte real do que aparece no site.
 
 ### 07/10/2026 - Nathan em Outubro + pendências de Setembro + CDI atualizado
 - **Outubro:** Nathan +R$60 (primeira contribuição do mês)
