@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { MONTHS_DATA, VALOR_PADRAO, getRefMonthIndex, getPendingItems, MonthData } from '@/lib/pendencias'
-import PixKey from './PixKey'
+import PixCopyButton from './PixCopyButton'
 
 function formatCurrency(value: number): string {
   return value.toLocaleString('pt-BR', {
@@ -109,11 +109,15 @@ function MonthAccordion({ data, isPast }: { data: MonthData; isPast: boolean }) 
 }
 
 function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
-  const [showPix, setShowPix] = useState(false)
-
   if (items.length === 0) return null
 
   const totalAtraso = items.reduce((acc, item) => acc + (VALOR_PADRAO[item.name] ?? 50), 0)
+
+  const totalByPerson: Record<string, number> = {}
+  items.forEach((item) => {
+    totalByPerson[item.name] = (totalByPerson[item.name] ?? 0) + (VALOR_PADRAO[item.name] ?? 50)
+  })
+  const personList = Object.entries(totalByPerson).sort((a, b) => b[1] - a[1])
 
   return (
     <div
@@ -178,7 +182,35 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
         ))}
       </div>
 
-      {/* Total em atraso */}
+      {/* Total por pessoa + botão de pagar (copia a chave PIX na hora) */}
+      <div
+        className="px-5 py-5 flex flex-col gap-2"
+        style={{ borderTop: '1px solid rgba(239,68,68,0.3)' }}
+      >
+        <div className="text-xs font-bold uppercase tracking-widest text-red-400/70 mb-1 text-center">
+          Total de pendências por pessoa
+        </div>
+        {personList.map(([name, total]) => (
+          <div
+            key={name}
+            className="flex items-center justify-between gap-3 rounded-xl px-4 py-3"
+            style={{
+              background: 'rgba(239,68,68,0.08)',
+              border: '1px solid rgba(239,68,68,0.25)',
+            }}
+          >
+            <div>
+              <div className="font-black text-white tracking-wide">{name}</div>
+              <div className="text-red-400 font-mono font-semibold text-sm">
+                R$ {formatCurrency(total)}
+              </div>
+            </div>
+            <PixCopyButton />
+          </div>
+        ))}
+      </div>
+
+      {/* Total geral */}
       <div
         className="text-center py-6 px-4"
         style={{
@@ -195,21 +227,6 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
         >
           R$ {formatCurrency(totalAtraso)}
         </div>
-      </div>
-
-      {/* Botão pagar + PIX */}
-      <div className="px-5 pb-5">
-        <button
-          onClick={() => setShowPix((v) => !v)}
-          className="w-full rounded-xl bg-green-600 hover:bg-green-500 transition-colors text-white font-bold py-3.5 flex items-center justify-center gap-2"
-        >
-          💰 Pagar pendência via PIX
-        </button>
-        {showPix && (
-          <div className="mt-3 flex justify-center">
-            <PixKey />
-          </div>
-        )}
       </div>
 
       <div
