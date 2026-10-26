@@ -38,8 +38,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
-| CARLOS    | 400,00                 |
-| YANDRA    | 400,00                 |
+| CARLOS    | 450,00                 |
+| YANDRA    | 450,00                 |
 | MARIA     | 202,00                 |
 
 ---
@@ -148,6 +148,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 |-----------|---------|
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
+| CARLOS    | R$ 50   |
+| YANDRA    | R$ 50   |
 | Demais    | não contribuíram (ainda) |
 
 ### Novembro e Dezembro
@@ -157,12 +159,12 @@ Sem contribuições ainda.
 
 ## NÚMEROS ATUAIS (26/10/2026)
 
-- **Total contribuições:** R$ 3.496,00
+- **Total contribuições:** R$ 3.596,00
 - **Rendimento CDI:** R$ 202,73
-- **Saldo total:** R$ 3.698,73
+- **Saldo total:** R$ 3.798,73
 - **Meta:** R$ 5.000,00
-- **Progresso:** 74,0%
-- **Falta:** R$ 1.301,27
+- **Progresso:** 76,0%
+- **Falta:** R$ 1.201,27
 - **Prazo:** Dezembro/2026
 
 ---
@@ -273,6 +275,11 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 26/10/2026 (2) - Carlos e Yandra em Outubro
+- **Outubro:** Carlos +R$50 e Yandra +R$50
+- Totais atualizados: Carlos 450, Yandra 450
+- Saldo total: R$ 3.798,73 (76,0% da meta)
 
 ### 26/10/2026 - CDI atualizado
 - **CDI atualizado:** R$ 193,61 → R$ 202,73
