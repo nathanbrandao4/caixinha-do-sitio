@@ -182,13 +182,17 @@ caixinha-do-sitio/
 │   ├── historico/page.tsx          # Histórico com filtros (usa Supabase)
 │   └── api/enviar-sugestao/route.ts # API de sugestões (Supabase + Resend)
 ├── components/
-│   ├── Header.tsx                  # Cabeçalho "Caixinha do Sítio"
+│   ├── Header.tsx                  # Cabeçalho "Caixinha do Sítio" + chave PIX (copiar)
 │   ├── BalanceCard.tsx             # Card grande com saldo, barra de progresso, meta
 │   ├── ContributorsList.tsx        # Ranking de contribuintes com posições
-│   ├── MonthlyBreakdown.tsx        # Accordion com contribuições por mês (Jan-Dez)
+│   ├── MonthlyBreakdown.tsx        # Accordion por mês + alerta de pendências + botão pagar PIX
+│   ├── PendingWarningModal.tsx     # Modal grande ao abrir o site avisando quem tem pendência
+│   ├── PixKey.tsx                  # Chave PIX com botão de copiar (reutilizável)
 │   ├── SuggestionBox.tsx           # Formulário de sugestões para férias
 │   └── TransactionList.tsx         # Lista de transações (entradas/saídas)
 ├── lib/
+│   ├── pendencias.ts               # DADOS DOS MESES (MONTHS_DATA) + cálculo de pendências —
+│   │                                 fonte única usada pelo MonthlyBreakdown e pelo modal
 │   └── supabase.ts                 # Cliente Supabase
 ├── types/
 │   └── index.ts                    # Tipos TS + constantes (PARTICIPANTS, META=5000)
@@ -215,7 +219,30 @@ caixinha-do-sitio/
 - Janeiro marcado como "(opcional)"
 - Cada mês mostra todos os participantes com valor ou "não contribuiu"
 - Meses futuros mostram "sem contribuintes"
-- Dados hardcoded no próprio componente (array MONTHS_DATA)
+- Dados hardcoded em `lib/pendencias.ts` (array `MONTHS_DATA`) — NÃO mais dentro do componente
+- Tem `id="pendencias"` na div raiz (âncora pra onde o modal de aviso rola a página)
+- Dentro do bloco de pendências tem o botão "💰 Pagar pendência via PIX", que revela a chave PIX
+
+### Alerta de pendências (PendingWarningModal.tsx)
+- Modal grande e chamativo que aparece assim que a página carrega, se houver alguém pendente
+- Lista os nomes de quem está pendente (calculado automaticamente, nunca hardcoded)
+- Dois botões: "Ver minhas pendências" (fecha o modal e rola até `#pendencias`) e
+  "Não tenho pendências" (fecha o modal e volta ao topo)
+- Se não houver ninguém pendente, o modal simplesmente não aparece
+
+### Chave PIX (PixKey.tsx)
+- Componente reutilizável: mostra a chave PIX com botão de copiar (`navigator.clipboard`)
+- Usado no `Header.tsx` (logo abaixo do título, visível em todas as páginas) e dentro do
+  bloco de pendências do `MonthlyBreakdown.tsx`
+- Chave PIX atual: `59.778.669/0001-51` (editar `PIX_KEY` em `components/PixKey.tsx` se mudar)
+
+### lib/pendencias.ts — fonte única dos dados de mês
+- Antes, `MonthlyBreakdown.tsx` tinha os dados dos meses hardcoded direto no componente, e em
+  algum momento o `DIARIO.md` ficou com uma cópia manual desses dados que saiu de sincronia com
+  o código (bug encontrado em 24/10/2026 — Abril e Maio apareciam errados no DIARIO)
+- Pra isso não se repetir, os dados agora moram só em `lib/pendencias.ts` (`MONTHS_DATA`,
+  `VALOR_PADRAO`) e tanto o `MonthlyBreakdown.tsx` quanto o `PendingWarningModal.tsx` importam
+  de lá — qualquer mudança de mês já aparece certa nos dois lugares automaticamente
 
 ### Formulários (nova-entrada, nova-saida)
 - Gravam no Supabase via client-side
@@ -275,6 +302,19 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 26/10/2026 (3) - Alerta de pendências, pagamento via PIX e refatoração dos dados
+- **Novo modal de aviso** (`PendingWarningModal.tsx`): aparece bem grande e chamativo assim
+  que o site carrega, se houver alguém pendente. Diz os nomes de quem está pendente e o total
+  em atraso, com botões "Ver minhas pendências" (rola até a seção) e "Não tenho pendências"
+  (volta ao topo)
+- **Chave PIX com botão de copiar** (`PixKey.tsx`): adicionada no topo do site, logo abaixo
+  do título (`Header.tsx`), e também dentro da seção de pendências via o novo botão
+  "💰 Pagar pendência via PIX". Chave: `59.778.669/0001-51`
+- **Refatoração:** os dados dos meses (`MONTHS_DATA`) saíram de dentro de `MonthlyBreakdown.tsx`
+  e foram para `lib/pendencias.ts`, que agora é a fonte única usada tanto pelo accordion de
+  meses quanto pelo modal de aviso — evita a dessincronia de dados que corrigimos há 2 dias
+- Nenhum valor de contribuição mudou nessa atualização, só funcionalidade nova
 
 ### 26/10/2026 (2) - Carlos e Yandra em Outubro
 - **Outubro:** Carlos +R$50 e Yandra +R$50
@@ -376,7 +416,7 @@ RESEND_API_KEY=re_xxx (opcional)
 
 ## NOTAS IMPORTANTES
 
-1. O dashboard usa dados HARDCODED - para atualizar valores, editar `app/page.tsx` e `components/MonthlyBreakdown.tsx`
+1. O dashboard usa dados HARDCODED - para atualizar valores, editar `app/page.tsx` (totais e CDI) e `lib/pendencias.ts` (dados por mês, em `MONTHS_DATA`)
 2. Os formulários de entrada/saída gravam no Supabase, mas o dashboard não lê de lá
 3. O email de notificação de sugestões vai para: nathanramos2771@gmail.com
 4. A foto de fundo vem do Unsplash (URL externa no globals.css)
