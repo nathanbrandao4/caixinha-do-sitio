@@ -1,5 +1,7 @@
 'use client'
 
+import PixKey from './PixKey'
+
 export default function Header() {
   return (
     <header className="bg-black/40 backdrop-blur-sm border-b border-yellow-500/30">
@@ -10,7 +12,10 @@ export default function Header() {
             <span className="text-white/70 text-2xl mx-3">do</span>
             <span className="text-green-400 drop-shadow-lg">Sítio</span>
           </h1>
-          <p className="text-white/50 text-lg">Férias em Família 2026</p>
+          <p className="text-white/50 text-lg mb-4">Férias em Família 2026</p>
+          <div className="flex justify-center">
+            <PixKey compact />
+          </div>
         </div>
       </div>
     </header>

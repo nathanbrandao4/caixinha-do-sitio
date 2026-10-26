@@ -1,6 +1,7 @@
 import BalanceCard from '@/components/BalanceCard'
 import ContributorsList from '@/components/ContributorsList'
 import MonthlyBreakdown from '@/components/MonthlyBreakdown'
+import PendingWarningModal from '@/components/PendingWarningModal'
 import { ContributorTotal } from '@/types'
 
 // ========================================
@@ -27,6 +28,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center px-4 py-8">
+      <PendingWarningModal />
       {/* Saldo GRANDE e Centralizado */}
       <div className="w-full max-w-2xl mb-12">
         <BalanceCard balance={balance} />

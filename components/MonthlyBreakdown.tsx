@@ -1,20 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { PARTICIPANTS } from '@/types'
-
-interface MonthContribution {
-  name: string
-  amount: number | null
-}
-
-interface MonthData {
-  month: string
-  monthIndex: number
-  optional?: boolean
-  contributions: MonthContribution[]
-  pending: string[]
-}
+import { MONTHS_DATA, VALOR_PADRAO, getRefMonthIndex, getPendingItems, MonthData } from '@/lib/pendencias'
+import PixKey from './PixKey'
 
 function formatCurrency(value: number): string {
   return value.toLocaleString('pt-BR', {
@@ -22,92 +10,6 @@ function formatCurrency(value: number): string {
     maximumFractionDigits: 2,
   })
 }
-
-function buildMonth(
-  month: string,
-  monthIndex: number,
-  data: Record<string, number>,
-  optional?: boolean
-): MonthData {
-  const contributions: MonthContribution[] = PARTICIPANTS.map((name) => ({
-    name,
-    amount: name in data ? data[name] : null,
-  }))
-
-  contributions.sort((a, b) => {
-    if (a.amount === null && b.amount === null) return 0
-    if (a.amount === null) return 1
-    if (b.amount === null) return -1
-    return b.amount - a.amount
-  })
-
-  const pending = optional
-    ? []
-    : PARTICIPANTS.filter((name) => !(name in data))
-
-  return { month, monthIndex, optional, contributions, pending }
-}
-
-const MONTHS_DATA: MonthData[] = [
-  buildMonth('Janeiro', 0, { NATHAN: 50, ELIANE: 50, BERNARDO: 50 }, true),
-
-  buildMonth('Fevereiro', 1, {
-    MARCELO: 100,
-    NATHAN: 60,
-    MARIA: 51,
-    ELIANE: 50,
-    BERNARDO: 50,
-    CARLOS: 50,
-    YANDRA: 50,
-    JOSÉ: 50,
-  }),
-
-  buildMonth('Março', 2, {
-    MARCELO: 100,
-    NATHAN: 60,
-    ELIANE: 52,
-    BERNARDO: 50,
-    CARLOS: 50,
-    YANDRA: 50,
-    JOSÉ: 50,
-  }),
-
-  buildMonth('Abril', 3, {
-    MARCELO: 100,
-    NATHAN: 60,
-    ELIANE: 52,
-    BERNARDO: 50,
-    MARIA: 51,
-    CARLOS: 50,
-    YANDRA: 50,
-    JOSÉ: 50,
-  }),
-
-  buildMonth('Maio', 4, {
-    MARCELO: 100,
-    NATHAN: 60,
-    ELIANE: 50,
-    BERNARDO: 50,
-    CARLOS: 50,
-    YANDRA: 50,
-    JOSÉ: 50,
-    MARIA: 50,
-  }),
-
-  buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, CARLOS: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
-
-  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50, CARLOS: 50 }),
-
-  buildMonth('Agosto', 7, { NATHAN: 60, BERNARDO: 100, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
-
-  buildMonth('Setembro', 8, { NATHAN: 60, YANDRA: 50, CARLOS: 50, MARCELO: 100 }),
-
-  buildMonth('Outubro', 9, { NATHAN: 60, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
-
-  ...(['Novembro', 'Dezembro'] as const).map(
-    (month, i) => buildMonth(month, 10 + i, {})
-  ),
-]
 
 function MonthAccordion({ data, isPast }: { data: MonthData; isPast: boolean }) {
   const [open, setOpen] = useState(false)
@@ -206,19 +108,9 @@ function MonthAccordion({ data, isPast }: { data: MonthData; isPast: boolean }) 
   )
 }
 
-// Valor padrão da cota mensal de cada participante (usado para calcular o total em atraso)
-const VALOR_PADRAO: Record<string, number> = {
-  MARCELO: 100,
-  NATHAN: 60,
-  ELIANE: 50,
-  BERNARDO: 50,
-  CARLOS: 50,
-  YANDRA: 50,
-  JOSÉ: 50,
-  MARIA: 50,
-}
-
 function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
+  const [showPix, setShowPix] = useState(false)
+
   if (items.length === 0) return null
 
   const totalAtraso = items.reduce((acc, item) => acc + (VALOR_PADRAO[item.name] ?? 50), 0)
@@ -295,7 +187,7 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
         }}
       >
         <div className="text-xs font-bold uppercase tracking-widest text-red-400/70 mb-1">
-          Total em atraso
+          Total de pendências (soma de tudo)
         </div>
         <div
           className="text-5xl sm:text-6xl font-black text-red-500"
@@ -303,6 +195,21 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
         >
           R$ {formatCurrency(totalAtraso)}
         </div>
+      </div>
+
+      {/* Botão pagar + PIX */}
+      <div className="px-5 pb-5">
+        <button
+          onClick={() => setShowPix((v) => !v)}
+          className="w-full rounded-xl bg-green-600 hover:bg-green-500 transition-colors text-white font-bold py-3.5 flex items-center justify-center gap-2"
+        >
+          💰 Pagar pendência via PIX
+        </button>
+        {showPix && (
+          <div className="mt-3 flex justify-center">
+            <PixKey />
+          </div>
+        )}
       </div>
 
       <div
@@ -319,21 +226,11 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
 }
 
 export default function MonthlyBreakdown() {
-  const browserMonthIndex = new Date().getMonth()
-
-  // Se já existe contribuição num mês futuro, todos os meses anteriores são passados
-  const lastContributedMonth = Math.max(
-    ...MONTHS_DATA.filter((m) => m.contributions.some((c) => c.amount !== null)).map((m) => m.monthIndex)
-  )
-  const refMonthIndex = Math.max(browserMonthIndex, lastContributedMonth)
-
-  const pendingItems = MONTHS_DATA.flatMap((m) => {
-    if (m.optional || m.monthIndex >= refMonthIndex) return []
-    return m.pending.map((name) => ({ name, month: m.month }))
-  })
+  const refMonthIndex = getRefMonthIndex()
+  const pendingItems = getPendingItems()
 
   return (
-    <div>
+    <div id="pendencias">
       <div className="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden">
         <div className="bg-gradient-to-r from-blue-600/80 to-blue-500/80 px-5 py-4">
           <h3 className="font-bold text-white text-lg flex items-center justify-center gap-3">
