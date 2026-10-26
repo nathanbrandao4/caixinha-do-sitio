@@ -18,7 +18,7 @@ const CONTRIBUICOES: ContributorTotal[] = [
 ]
 
 // Rendimento CDI acumulado
-const RENDIMENTO_CDI = 193.61
+const RENDIMENTO_CDI = 202.73
 // ========================================
 
 export default function HomePage() {

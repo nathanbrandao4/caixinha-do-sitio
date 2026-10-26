@@ -155,14 +155,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (24/10/2026)
+## NÚMEROS ATUAIS (26/10/2026)
 
 - **Total contribuições:** R$ 3.496,00
-- **Rendimento CDI:** R$ 193,61
-- **Saldo total:** R$ 3.689,61
+- **Rendimento CDI:** R$ 202,73
+- **Saldo total:** R$ 3.698,73
 - **Meta:** R$ 5.000,00
-- **Progresso:** 73,8%
-- **Falta:** R$ 1.310,39
+- **Progresso:** 74,0%
+- **Falta:** R$ 1.301,27
 - **Prazo:** Dezembro/2026
 
 ---
@@ -273,6 +273,10 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 26/10/2026 - CDI atualizado
+- **CDI atualizado:** R$ 193,61 → R$ 202,73
+- Saldo total: R$ 3.698,73 (74,0% da meta)
 
 ### 24/10/2026 (2) - CDI atualizado
 - **CDI atualizado:** R$ 180,85 → R$ 193,61
