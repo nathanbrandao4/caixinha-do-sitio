@@ -150,21 +150,21 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
-| Demais    | não contribuíram (ainda) |
+| ELIANE / BERNARDO / JOSÉ / MARIA | não contribuíram (pendência) |
 
 ### Novembro e Dezembro
 Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (26/10/2026)
+## NÚMEROS ATUAIS (03/11/2026)
 
 - **Total contribuições:** R$ 3.596,00
-- **Rendimento CDI:** R$ 202,73
-- **Saldo total:** R$ 3.798,73
+- **Rendimento CDI:** R$ 212,38
+- **Saldo total:** R$ 3.808,38
 - **Meta:** R$ 5.000,00
-- **Progresso:** 76,0%
-- **Falta:** R$ 1.201,27
+- **Progresso:** 76,2%
+- **Falta:** R$ 1.191,62
 - **Prazo:** Dezembro/2026
 
 ---
@@ -302,6 +302,13 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 03/11/2026 - Outubro fechado (pendências automáticas) + CDI atualizado
+- **Outubro fechou:** ELIANE, BERNARDO, JOSÉ e MARIA não contribuíram e agora entram
+  como pendência (automático pela data do navegador — já aparecem em vermelho na seção
+  de pendências e no modal de aviso, sem precisar editar código)
+- **CDI atualizado:** R$ 202,73 → R$ 212,38
+- Saldo total: R$ 3.808,38 (76,2% da meta)
 
 ### 26/10/2026 (3) - Alerta de pendências, pagamento via PIX e refatoração dos dados
 - **Novo modal de aviso** (`PendingWarningModal.tsx`): aparece bem grande e chamativo assim
