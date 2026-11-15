@@ -128,21 +128,21 @@ function PendingAlert({ items }: { items: { name: string; month: string }[] }) {
         boxShadow: '0 0 40px rgba(239,68,68,0.15), 0 0 80px rgba(239,68,68,0.05)',
       }}
     >
-      {/* Cabeçalho */}
+      {/* Cabeçalho - flex-wrap pra nunca estourar/cortar o badge em telas estreitas */}
       <div
-        className="flex items-center justify-center gap-4 px-6 py-5"
+        className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6 py-5 text-center"
         style={{ background: 'linear-gradient(90deg, #dc2626, #b91c1c)' }}
       >
-        <span className="text-4xl animate-pulse">🚨</span>
+        <span className="text-3xl sm:text-4xl animate-pulse">🚨</span>
         <div className="text-center">
-          <div className="text-2xl font-black tracking-widest uppercase">
+          <div className="text-lg sm:text-2xl font-black tracking-widest uppercase">
             Pendências em Atraso
           </div>
           <div className="text-xs text-white/70 mt-1">
             contribuições de meses anteriores não realizadas
           </div>
         </div>
-        <span className="bg-white text-red-600 font-black text-sm px-3 py-1.5 rounded-full whitespace-nowrap">
+        <span className="bg-white text-red-600 font-black text-xs sm:text-sm px-3 py-1.5 rounded-full whitespace-nowrap">
           {items.length} em atraso
         </span>
       </div>

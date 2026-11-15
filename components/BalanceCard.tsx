@@ -18,7 +18,7 @@ export default function BalanceCard({ balance }: BalanceCardProps) {
   const falta = META - balance
 
   return (
-    <div className="relative bg-black/60 backdrop-blur-md rounded-3xl p-10 md:p-14 border-2 border-yellow-500/50 shadow-2xl animate-glow card-shine">
+    <div className="relative bg-black/60 backdrop-blur-md rounded-3xl p-10 md:p-14 border-2 border-yellow-500/50 shadow-2xl animate-glow card-shine @container">
 
       <div className="relative z-10 text-center">
         {/* Label pequeno */}
@@ -26,11 +26,20 @@ export default function BalanceCard({ balance }: BalanceCardProps) {
           Total Arrecadado
         </p>
 
-        {/* VALOR GIGANTE - responsivo para mobile */}
-        <div className="mb-8 w-full overflow-hidden">
-          <div className="flex items-baseline justify-center whitespace-nowrap">
-            <span className="text-white/50 text-2xl sm:text-3xl md:text-5xl">R$</span>
-            <span className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+        {/* VALOR GIGANTE - a fonte escala com a largura real do card (cqw),
+            então nunca estoura/corta, não importa quantos dígitos o saldo tenha */}
+        <div className="mb-8 w-full">
+          <div className="flex items-baseline justify-center gap-1 flex-wrap">
+            <span
+              className="text-white/50 font-semibold"
+              style={{ fontSize: 'clamp(0.9rem, 6cqw, 2.5rem)' }}
+            >
+              R$
+            </span>
+            <span
+              className="font-black text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+              style={{ fontSize: 'clamp(1.8rem, 15cqw, 6rem)', lineHeight: 1 }}
+            >
               {formatCurrency(balance)}
             </span>
           </div>
