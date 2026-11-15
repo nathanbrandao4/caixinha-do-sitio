@@ -33,8 +33,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 
 | Nome      | Contribuição total (R$) |
 |-----------|------------------------|
-| MARCELO   | 900,00                 |
-| NATHAN    | 590,00                 |
+| MARCELO   | 1000,00                |
+| NATHAN    | 650,00                 |
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
@@ -152,19 +152,26 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | YANDRA    | R$ 50   |
 | ELIANE / BERNARDO / JOSÉ / MARIA | não contribuíram (pendência) |
 
-### Novembro e Dezembro
+### Novembro
+| Nome      | Valor   |
+|-----------|---------|
+| MARCELO   | R$ 100  |
+| NATHAN    | R$ 60   |
+| Demais    | não contribuíram (ainda) |
+
+### Dezembro
 Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (03/11/2026)
+## NÚMEROS ATUAIS (15/11/2026)
 
-- **Total contribuições:** R$ 3.596,00
-- **Rendimento CDI:** R$ 212,38
-- **Saldo total:** R$ 3.808,38
+- **Total contribuições:** R$ 3.756,00
+- **Rendimento CDI:** R$ 229,79
+- **Saldo total:** R$ 3.985,79
 - **Meta:** R$ 5.000,00
-- **Progresso:** 76,2%
-- **Falta:** R$ 1.191,62
+- **Progresso:** 79,7%
+- **Falta:** R$ 1.014,21
 - **Prazo:** Dezembro/2026
 
 ---
@@ -302,6 +309,12 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 15/11/2026 - Marcelo e Nathan em Novembro + CDI atualizado
+- **Novembro:** Marcelo +R$100 e Nathan +R$60 (primeiras contribuições do mês)
+- **CDI atualizado:** R$ 212,38 → R$ 229,79
+- Totais atualizados: Marcelo 1000, Nathan 650
+- Saldo total: R$ 3.985,79 (79,7% da meta)
 
 ### 03/11/2026 - Outubro fechado (pendências automáticas) + CDI atualizado
 - **Outubro fechou:** ELIANE, BERNARDO, JOSÉ e MARIA não contribuíram e agora entram

@@ -99,9 +99,9 @@ export const MONTHS_DATA: MonthData[] = [
 
   buildMonth('Outubro', 9, { NATHAN: 60, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
 
-  ...(['Novembro', 'Dezembro'] as const).map(
-    (month, i) => buildMonth(month, 10 + i, {})
-  ),
+  buildMonth('Novembro', 10, { MARCELO: 100, NATHAN: 60 }),
+
+  buildMonth('Dezembro', 11, {}),
 ]
 
 // Valor padrão da cota mensal de cada participante (usado para calcular o total em atraso)
