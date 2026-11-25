@@ -13,7 +13,7 @@ Sistema de gerenciamento de caixinha coletiva para férias em família.
 
 ## Participantes
 
-MARCELO, ELIANE, BERNADO, CARLOS, YANDRA, NATHAN, MARIA, LEONARDO, JOSÉ
+MARCELO, ELIANE, BERNARDO, YANDRA, NATHAN, MARIA, JOSÉ
 
 **Meta:** R$ 4.500 até Dezembro/2026
 

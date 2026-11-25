@@ -38,7 +38,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | ELIANE    | 304,00                 |
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
-| CARLOS    | 450,00                 |
 | YANDRA    | 450,00                 |
 | MARIA     | 202,00                 |
 
@@ -62,7 +61,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARIA     | R$ 51   |
 | ELIANE    | R$ 50   |
 | BERNARDO  | R$ 50   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
 
@@ -73,7 +71,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | ELIANE    | R$ 52   |
 | BERNARDO  | R$ 50   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
 | MARIA     | não contribuiu |
@@ -86,7 +83,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | ELIANE    | R$ 52   |
 | MARIA     | R$ 51   |
 | BERNARDO  | R$ 50   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
 
@@ -97,7 +93,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | ELIANE    | R$ 50   |
 | BERNARDO  | R$ 50   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
 | MARIA     | R$ 50   |
@@ -108,7 +103,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
 | BERNARDO  | R$ 50   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | ELIANE    | R$ 50   |
 | MARIA     | R$ 50   |
@@ -121,7 +115,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | BERNARDO  | R$ 50   |
 | YANDRA    | R$ 50   |
-| CARLOS    | R$ 50   |
 | Demais    | não contribuíram |
 
 ### Agosto
@@ -130,7 +123,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | MARCELO   | R$ 100  |
 | BERNARDO  | R$ 100  |
 | NATHAN    | R$ 60   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | ELIANE / JOSÉ / MARIA | não contribuíram (pendência) |
 
@@ -139,7 +131,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 |-----------|---------|
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | ELIANE / BERNARDO / JOSÉ / MARIA | não contribuíram (pendência) |
 
@@ -148,7 +139,6 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 |-----------|---------|
 | MARCELO   | R$ 100  |
 | NATHAN    | R$ 60   |
-| CARLOS    | R$ 50   |
 | YANDRA    | R$ 50   |
 | ELIANE / BERNARDO / JOSÉ / MARIA | não contribuíram (pendência) |
 
@@ -164,14 +154,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (15/11/2026)
+## NÚMEROS ATUAIS (25/11/2026)
 
-- **Total contribuições:** R$ 3.756,00
-- **Rendimento CDI:** R$ 229,79
-- **Saldo total:** R$ 3.985,79
+- **Total contribuições:** R$ 3.306,00
+- **Rendimento CDI:** R$ 232,22
+- **Saldo total:** R$ 3.538,22
 - **Meta:** R$ 5.000,00
-- **Progresso:** 79,7%
-- **Falta:** R$ 1.014,21
+- **Progresso:** 70,8%
+- **Falta:** R$ 1.461,78
 - **Prazo:** Dezembro/2026
 
 ---
@@ -309,6 +299,19 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 25/11/2026 - Carlos sai do projeto (valor devolvido)
+- **CARLOS removido de vez:** saiu da caixinha e recebeu o valor dele de volta (R$450,00,
+  tudo que tinha contribuído até Outubro). Removido do ranking, de todos os meses em que
+  aparecia (Fevereiro a Outubro) e da lista de participantes (`types/index.ts`) — não vai
+  mais aparecer em lugar nenhum do site, nem em meses passados
+- **Números batidos com o extrato real do banco** depois da saída dele:
+  - Total contribuições (7 pessoas que ficaram): R$ 3.756,00 → R$ 3.306,00
+  - CDI: R$ 229,79 → R$ 232,22 (ajustado pra bater exatamente com o saldo real do banco,
+    R$ 3.538,22 — a saída de Carlos tirou proporcionalmente um pouco do rendimento
+    acumulado também, não só o principal dele)
+  - Ninguém além do Carlos teve o valor alterado
+- Saldo total: R$ 3.538,22 (70,8% da meta)
 
 ### 15/11/2026 - Marcelo e Nathan em Novembro + CDI atualizado
 - **Novembro:** Marcelo +R$100 e Nathan +R$60 (primeiras contribuições do mês)

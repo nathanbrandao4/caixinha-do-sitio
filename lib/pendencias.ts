@@ -52,7 +52,6 @@ export const MONTHS_DATA: MonthData[] = [
     MARIA: 51,
     ELIANE: 50,
     BERNARDO: 50,
-    CARLOS: 50,
     YANDRA: 50,
     JOSÉ: 50,
   }),
@@ -62,7 +61,6 @@ export const MONTHS_DATA: MonthData[] = [
     NATHAN: 60,
     ELIANE: 52,
     BERNARDO: 50,
-    CARLOS: 50,
     YANDRA: 50,
     JOSÉ: 50,
   }),
@@ -73,7 +71,6 @@ export const MONTHS_DATA: MonthData[] = [
     ELIANE: 52,
     BERNARDO: 50,
     MARIA: 51,
-    CARLOS: 50,
     YANDRA: 50,
     JOSÉ: 50,
   }),
@@ -83,21 +80,20 @@ export const MONTHS_DATA: MonthData[] = [
     NATHAN: 60,
     ELIANE: 50,
     BERNARDO: 50,
-    CARLOS: 50,
     YANDRA: 50,
     JOSÉ: 50,
     MARIA: 50,
   }),
 
-  buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, CARLOS: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
+  buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
 
-  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50, CARLOS: 50 }),
+  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50 }),
 
-  buildMonth('Agosto', 7, { NATHAN: 60, BERNARDO: 100, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
+  buildMonth('Agosto', 7, { NATHAN: 60, BERNARDO: 100, MARCELO: 100, YANDRA: 50 }),
 
-  buildMonth('Setembro', 8, { NATHAN: 60, YANDRA: 50, CARLOS: 50, MARCELO: 100 }),
+  buildMonth('Setembro', 8, { NATHAN: 60, YANDRA: 50, MARCELO: 100 }),
 
-  buildMonth('Outubro', 9, { NATHAN: 60, MARCELO: 100, CARLOS: 50, YANDRA: 50 }),
+  buildMonth('Outubro', 9, { NATHAN: 60, MARCELO: 100, YANDRA: 50 }),
 
   buildMonth('Novembro', 10, { MARCELO: 100, NATHAN: 60 }),
 
@@ -110,7 +106,6 @@ export const VALOR_PADRAO: Record<string, number> = {
   NATHAN: 60,
   ELIANE: 50,
   BERNARDO: 50,
-  CARLOS: 50,
   YANDRA: 50,
   JOSÉ: 50,
   MARIA: 50,
