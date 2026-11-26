@@ -39,7 +39,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | BERNARDO  | 450,00                 |
 | JOSÉ      | 250,00                 |
 | YANDRA    | 450,00                 |
-| MARIA     | 202,00                 |
+| MARIA     | 302,00                 |
 
 ---
 
@@ -73,7 +73,7 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | BERNARDO  | R$ 50   |
 | YANDRA    | R$ 50   |
 | JOSÉ      | R$ 50   |
-| MARIA     | não contribuiu |
+| MARIA     | R$ 50   |
 
 ### Abril
 | Nome      | Valor   |
@@ -115,7 +115,8 @@ A família junta dinheiro ao longo do ano para gastar nas férias de Dezembro/20
 | NATHAN    | R$ 60   |
 | BERNARDO  | R$ 50   |
 | YANDRA    | R$ 50   |
-| Demais    | não contribuíram |
+| MARIA     | R$ 50   |
+| ELIANE / JOSÉ | não contribuíram (pendência) |
 
 ### Agosto
 | Nome      | Valor   |
@@ -154,14 +155,14 @@ Sem contribuições ainda.
 
 ---
 
-## NÚMEROS ATUAIS (25/11/2026)
+## NÚMEROS ATUAIS (26/11/2026)
 
-- **Total contribuições:** R$ 3.306,00
-- **Rendimento CDI:** R$ 232,22
-- **Saldo total:** R$ 3.538,22
+- **Total contribuições:** R$ 3.406,00
+- **Rendimento CDI:** R$ 234,01
+- **Saldo total:** R$ 3.640,01
 - **Meta:** R$ 5.000,00
-- **Progresso:** 70,8%
-- **Falta:** R$ 1.461,78
+- **Progresso:** 72,8%
+- **Falta:** R$ 1.359,99
 - **Prazo:** Dezembro/2026
 
 ---
@@ -299,6 +300,20 @@ RESEND_API_KEY=re_xxx (opcional)
 ---
 
 ## HISTÓRICO DE ALTERAÇÕES
+
+### 26/11/2026 - Maria quita Março e Julho + reconciliação com o C6
+- **Maria pagou R$100** pra quitar dívida antiga — aplicado nos dois meses mais antigos em
+  que ela devia desde o início do ano: **Março** (R$50) e **Julho** (R$50). Os dois saem da
+  lista de pendência dela; ainda fica devendo Agosto, Setembro e Outubro
+- Total atualizado: Maria 302
+- **Reconciliado com o extrato do C6 Invest** (print do app): saldo bruto R$ 3.640,01,
+  rendimento acumulado R$ 196,01. Mesma coisa que aconteceu na saída do Carlos: bateu uma
+  diferença de ~R$38 entre a nossa soma (contribuições + CDI anterior) e o saldo real do
+  banco — provavelmente resíduo de como o resgate do Carlos mexeu no rendimento proporcional.
+  Segui o mesmo critério de antes: mantém os valores de cada pessoa intactos e ajusta o CDI
+  pra bater com o saldo real → CDI R$ 232,22 → R$ 234,01 (não R$196,01 literal do banco,
+  pra fechar a conta certa)
+- Saldo total: R$ 3.640,01 (72,8% da meta)
 
 ### 25/11/2026 - Carlos sai do projeto (valor devolvido)
 - **CARLOS removido de vez:** saiu da caixinha e recebeu o valor dele de volta (R$450,00,

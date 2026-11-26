@@ -63,6 +63,7 @@ export const MONTHS_DATA: MonthData[] = [
     BERNARDO: 50,
     YANDRA: 50,
     JOSÉ: 50,
+    MARIA: 50,
   }),
 
   buildMonth('Abril', 3, {
@@ -87,7 +88,7 @@ export const MONTHS_DATA: MonthData[] = [
 
   buildMonth('Junho', 5, { MARCELO: 100, NATHAN: 60, BERNARDO: 50, YANDRA: 50, ELIANE: 50, MARIA: 50, JOSÉ: 50 }),
 
-  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50 }),
+  buildMonth('Julho', 6, { NATHAN: 60, MARCELO: 100, BERNARDO: 50, YANDRA: 50, MARIA: 50 }),
 
   buildMonth('Agosto', 7, { NATHAN: 60, BERNARDO: 100, MARCELO: 100, YANDRA: 50 }),
 
